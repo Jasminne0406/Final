@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	<meta name="generator" content="Hugo 0.88.1">
+	<title>Task2</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
+
+	<!-- Custom styles for this template -->
+	<link href="/assets/css/signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+	<main id="parent" class="form-signin">
+		<form id="child" method="post" onsubmit="return false">
+			<img class="mb-4" src="/assets/img/Avatar-Profile.png" alt="" width="150" height="150">
+			<h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+			<div class="form-floating">
+				<input id="nameEmail" name="username" type="text" class="form-control" id="floatingInput"
+					placeholder="name@example.com">
+				<label for="floatingInput">Username</label>
+			</div>
+			<br>
+			<div class="form-floating">
+				<input type="password" class="form-control" id="password" placeholder="Password">
+				<label for="floatingPassword">Password</label>
+			</div>
+
+			<div class="checkbox mb-3">
+
+			</div>
+			<button class="w-100 btn btn-lg btn-primary" onclick="clickBtn()" type="submit">Sign in</button>
+
+		</form>
+
+		<div id="show"></div>
+	</main>
+
+</body>
+<script type="text/javascript">
+	function clickBtn() {
+		var name = document.getElementById("nameEmail").value;
+		var pass = document.getElementById("password").value;
+		//document.getElementById("child").submit();
+
+		if (name == "toto") {
+			if (pass == "titi") {
+				//pass = parseInt(pass);
+				console.log(pass);
+				window.location.href = "http://localhost:8080/homepage?username="+name;
+				/* "&password="+pass */
+			}
+			else {
+				alert("Incorrect Password !!!");
+			}
+
+		} else {
+			alert("Username not found !!!");
+		}
+	} 
+</script>
+
+</html>
